@@ -26,6 +26,7 @@ GEM
     activesupport (3.0.12)
     addressable (2.2.7)
     arel (2.0.10)
+    bcrypt-ruby (3.0.1)
     builder (2.1.2)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -96,6 +97,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeresource (>= 2.3.12, < 3.1)
+  bcrypt-ruby
   capybara (= 1.1.2)
   foreman
   net-ldap (~> 0.1.1)
