@@ -139,7 +139,7 @@ module CASServer
 
       # TODO: Env variable support here.
       #
-      require 'ERB'
+      require 'erb'
       cfg_text = File.open(config_file,"r") { |f| f.read }
       processed_cfg = ERB.new(cfg_text).result
 
