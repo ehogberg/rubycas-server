@@ -1,4 +1,5 @@
 .svn
+.env
 config.yml
 *.db
 *.sqlite3
