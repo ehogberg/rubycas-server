@@ -543,7 +543,7 @@ default_locale: en
 
 log:
 #  file: /var/log/casserver.log
-#  file: log/casserver.log
+  file: tmp/casserver.log
   level: INFO
 
 
