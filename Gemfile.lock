@@ -39,19 +39,24 @@ GEM
     crypt-isaac (0.9.1)
     diff-lcs (1.1.3)
     ffi (1.0.11)
+    foreman (0.46.0)
+      thor (>= 0.13.6)
     i18n (0.5.0)
+    kgio (2.7.4)
     libwebsocket (0.1.3)
       addressable
     mime-types (1.18)
     multi_json (1.3.2)
     net-ldap (0.1.1)
     nokogiri (1.5.2)
+    pg (0.13.2)
     r18n-core (0.4.14)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
     rack-test (0.6.1)
       rack (>= 1.0)
+    raindrops (0.9.0)
     rake (0.8.7)
     rspec (2.9.0)
       rspec-core (~> 2.9.0)
@@ -69,15 +74,20 @@ GEM
       multi_json (~> 1.0)
       rubyzip
     sinatra (1.3.2)
-      rack (>= 1.3.6, ~> 1.3)
+      rack (~> 1.3, >= 1.3.6)
       rack-protection (~> 1.2)
-      tilt (>= 1.3.3, ~> 1.3)
+      tilt (~> 1.3, >= 1.3.3)
     sinatra-r18n (0.4.14)
       r18n-core (= 0.4.14)
       sinatra (>= 1.3)
     sqlite3 (1.3.6)
+    thor (0.15.2)
     tilt (1.3.3)
     tzinfo (0.3.33)
+    unicorn (4.3.1)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
@@ -85,12 +95,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activeresource (< 3.1, >= 2.3.12)
+  activeresource (>= 2.3.12, < 3.1)
   capybara (= 1.1.2)
+  foreman
   net-ldap (~> 0.1.1)
+  pg
   rack-test
   rake (= 0.8.7)
   rspec
   rspec-core
   rubycas-server!
   sqlite3 (~> 1.3.1)
+  unicorn

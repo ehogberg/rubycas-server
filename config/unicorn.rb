@@ -27,8 +27,8 @@ pid "#{SINATRA_ROOT}/tmp/pids/unicorn.pid"
 # relative_path "/test_platform"
 # some applications/frameworks log to stderr or stdout, so prevent
 # them from going to /dev/null when daemonized here:
-stderr_path "#{SINATRA_ROOT}/log/unicorn.stderr.log"
-stdout_path "#{SINATRA_ROOT}/log/unicorn.stdout.log"
+#stderr_path "#{SINATRA_ROOT}/log/unicorn.stderr.log"
+#stdout_path "#{SINATRA_ROOT}/log/unicorn.stdout.log"
 
 # combine REE with "preload_app true" for memory savings
 # http://rubyenterpriseedition.com/faq.html#adapt_apps_for_cow
