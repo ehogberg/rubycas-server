@@ -8,10 +8,27 @@ end
 
 
 
+
 # Custom authenticator module for use in OLab RubyCAS implementation
 # Code should be fairly self-explanatory.
 require 'casserver/authenticators/base'
 require 'bcrypt'
+
+
+require 'casserver/authenticators/google'
+
+class OLabGoogleAuthenticator < CASServer::Authenticators::Google
+
+  def extra_attributes
+
+    @extra_attributes[:staff] = "true"
+
+    @extra_attributes
+  end
+
+end
+
+
 class OLabDatabaseAuthenticator < CASServer::Authenticators::Base
 
 
