@@ -271,7 +271,8 @@ disable_auto_migrations: false
 # requires no special configuration -- just specify its class name:
 #
 authenticator:
-  - class: CASServer::Authenticators::Google
+  - class: OLabGoogleAuthenticator
+    source: ./lib/olab.rb
     restricted_domain: opinionlab.com
   - class: OLabDatabaseAuthenticator
     source: ./lib/olab.rb
