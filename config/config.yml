@@ -494,7 +494,7 @@ authenticator:
 theme: simple
 
 # The name of your company/organization. This will show up on the login page.
-organization: Opinion Lab
+organization: OpinionLab
 
 # A short bit of text that shows up on the login page. You can make this blank
 # if you prefer to have no extra text shown at the bottom of the login box.
