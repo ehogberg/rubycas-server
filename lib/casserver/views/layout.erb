@@ -13,6 +13,59 @@
   </head>
 
   <body onload="if (document.getElementById('username')) document.getElementById('username').focus()">
-    <%= yield %>
+    <div id="head">
+        <h1><a href="http://www.opinionlab.com" alt="[+] opinionlab - feedback anywhere, anytime">
+            <img id="logo" src="<%= escape_html @uri_path %>/themes/<%= @theme %>/opinionlab-logo.png" />
+            </a></h1>
+        <h3>
+            contact
+            <span class="red">847.681.6100</span>
+        </h3>
+    </div>
+    <div id="main">
+        <div class="right" id="log_in">
+            <%= yield %>
+        </div>
+        <div id="content">
+                <h1>Analytics</h1>
+                <h2 class="red">visualize your feedback</h2>
+                <img class="screenshot left" src="<%= escape_html @uri_path %>/themes/<%= @theme %>/screenshot.png">
+                <ul>
+                  <li>
+                    <strong>Feedback Over Time</strong>
+                    <br>
+                    Analyze performance over time using vibrant charts.
+                  </li>
+                  <li>
+                    <strong>Map It</strong>
+                    <br>
+                    See where the feedback was given. Identify negative hot spots.
+                  </li>
+                  <li>
+                    <strong>Schedule Reports</strong>
+                    <br>
+                    Schedule email reports to be sent to people within your organization.
+                  </li>
+                </ul>
+        </div>
+    </div>
+    <div style="clear:both">&nbsp;</div>
+    <div id="foot">
+        <div class="left">
+                <p>
+                  <a href="#">Contact our Help Desk</a>
+                  for customer support.
+                  <br>
+                  Help Desk hours: 9am - 6pm EST
+                </p>
+        </div>
+        <div class="right">
+                      <p class="mark">
+                        Copyright &copy; 2012 OpinionLab Inc. All rights reserved.
+                        <br>
+                        OpinionLab ® is a trademark of OpinionLab Inc.&nbsp;
+                      </p>
+        </div>
+    </div>
   </body>
 </html>
