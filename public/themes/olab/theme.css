@@ -15,6 +15,10 @@ div.placeholder {
   padding-left: 10px;
 }
 
+h1 {
+	font-size: 40px!important;
+	margin: 0;
+}
 
 ul, menu, dir {
 display: block;
@@ -56,7 +60,7 @@ img {
 }
 
 #head {
-  height: 122px;
+  height: 102px;
   position: relative;
   -webkit-transition-property: height;
   -moz-transition-property: height;
@@ -126,18 +130,23 @@ table#login-box {
   margin: 0;
   padding: 0;
 }
+
 #main h1 {
-  padding-top: 30px;
+  padding: 5px 0 0 0;
 }
 #main h2 {
   padding-bottom: 20px;
 }
 
 
+#main {
+
+	 background: #f2f2f2 url(/images/light-grey-gradient.png) repeat-x;
+}
 #main #content {
   padding-left: 40px;
   text-align: left;
-  background: #f2f2f2 url(/images/light-grey-gradient.png) repeat-x;
+  padding-top: 20px;
 }
 
 #main #log_in {
@@ -147,8 +156,9 @@ table#login-box {
   margin-left: 20px;
   margin-right: 40px;
 }
+
 #main #log_in h1 {
-  padding-bottom: 30px;
+	padding: 30px 0  0 0;
 }
 
 #foot {
@@ -176,7 +186,7 @@ table#login-box {
   text-align: right;
 }
 #foot .mark {
-  background: url(/images/opinionlab-mark.png) no-repeat right 1em;
+  background: url(opinionlab-mark.png) no-repeat right 1em;
   padding-right: 40px;
 }
 
@@ -281,7 +291,7 @@ input[type='text'] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0px;
-  margin: 0;
+
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -298,7 +308,7 @@ input[type='text']:focus, input[type='text'].focus {
 
 input.text, textarea {
   background-color: white;
-  background-image: url('../images/bottom-shadow.png?1334758161');
+  background-image: url('bottom-shadow.png?1334758161');
   background-repeat: repeat-x;
   background-position: 0 0;
   -webkit-background-size: 100% 3px;
@@ -316,7 +326,7 @@ input.text, textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 9px 0 9px 0;
-  margin: 0;
+  margin: 0 0 1em 0!important;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -340,7 +350,7 @@ input, textarea, select {
 }
 
 button.button {
-  background-image: url("/images/button-mobile@2x.png");
+  background-image: url("button-mobile@2x.png");
   background-color: #e4171e;
   background-repeat: repeat-x;
   color: white;
@@ -409,6 +419,7 @@ form .placeholder {
   pointer-events: none;
   width: 260px;
   text-align: left;
+
 }
 form .placeholder.visible {
   display: block;

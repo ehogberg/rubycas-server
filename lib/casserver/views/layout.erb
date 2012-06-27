@@ -6,10 +6,14 @@
       xml:lang="en" lang="en" >
 
   <head>
-    <title><%= escape_html @organization %><%= t.label.central_login_title %></title>
+    <title>Log in to Opinionlab</title>
     <link rel="stylesheet" type="text/css" href="<%= escape_html @uri_path %>/themes/cas.css" />
     <link rel="stylesheet" type="text/css" href="<%= escape_html @uri_path %>/themes/<%= escape_html @theme %>/theme.css" />
     <link rel="icon" type="image/png" href="<%= escape_html @uri_path %>/themes/<%= escape_html @theme %>/favicon.png" />
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="/javascripts/login.js"></script>
   </head>
 
   <body onload="if (document.getElementById('username')) document.getElementById('username').focus()">
@@ -48,8 +52,9 @@
                   </li>
                 </ul>
         </div>
+        <div style="clear:both">&nbsp;</div>
     </div>
-    <div style="clear:both">&nbsp;</div>
+
     <div id="foot">
         <div class="left">
                 <p>
