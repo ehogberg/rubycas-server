@@ -161,8 +161,8 @@
 #   i.e. `mysqladmin -u root create casserver`)
 
 database:
-  adapter: postgresql
-  username: <%= ENV['DB_USERNAME'] %>
+  adapter: <%= ENV['DB_ADAPTER'] %> 
+  username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASSWORD'] %>
   host: <%= ENV['DB_HOST'] %>
   database: <%= ENV['DB_NAME'] %>
@@ -198,7 +198,7 @@ database:
 # that its database schema is up-to-date. To disable this behaviour set
 # the following option to true:
 
-disable_auto_migrations: false
+disable_auto_migrations: <%= ENV['DISABLE_AUTO_MIGRATIONS'] %>
 
 ##### AUTHENTICATION ###########################################################
 
