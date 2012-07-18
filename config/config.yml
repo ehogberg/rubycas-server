@@ -161,7 +161,7 @@
 #   i.e. `mysqladmin -u root create casserver`)
 
 database:
-  adapter: postgresql
+  adapter: sqlite3
   username: <%= ENV['DB_USERNAME'] %>
   password: <%= ENV['DB_PASSWORD'] %>
   host: <%= ENV['DB_HOST'] %>
