@@ -20,7 +20,7 @@ notice:
 label:
   username: "Username"
   password: "Password"
-  central_login_title: "Central Login"
+  central_login_title: "login"
 
 button:
   login: "LOGIN"
