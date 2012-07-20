@@ -18,7 +18,7 @@ notice:
   please_wait: "Please wait..."
 
 label:
-  username: "Username"
+  username: "Email"
   password: "Password"
   central_login_title: "login"
 

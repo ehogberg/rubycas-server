@@ -71,24 +71,36 @@ describe 'CASServer' do
       page.driver.options[:headers] = {'HTTP_ACCEPT_LANGUAGE' => 'pl'}
       #visit "/login?lang=pl"
       visit "/login"
-      page.should have_content("Użytkownik")
+      #page.should have_content("Użytkownik")
+      page.find("input[type=email]")[:placeholder].should == "Użytkownik"
 
       page.driver.options[:headers] = {'HTTP_ACCEPT_LANGUAGE' => 'pt_BR'}
       #visit "/login?lang=pt_BR"
       visit "/login"
-      page.should have_content("Usuário")
+      #page.should have_content("Usuário")
+      page.find("input[type=email]")[:placeholder].should == "Usuário"
 
       page.driver.options[:headers] = {'HTTP_ACCEPT_LANGUAGE' => 'en'}
       #visit "/login?lang=en"
       visit "/login"
-      page.should have_content("Username")
+      #page.should have_content("Username")
+      page.find("input[type=email]")[:placeholder].should == 'Email'
     end
 
-    it "is not vunerable to Cross Site Scripting" do
+    it "is not vulnerable to Cross Site Scripting" do
       visit '/login?service=%22%2F%3E%3cscript%3ealert%2832%29%3c%2fscript%3e'
       page.should_not have_content("alert(32)")
-      page.should_not have_xpath("//script")
-      #page.should have_xpath("<script>alert(32)</script>")
+      #page.should_not have_xpath("//script")
+      #page.should have_content("<script>alert(32)</script>")
+
+      # The existing rubycas-server specs do not properly detect for additional
+      # scripts being added to the page. The following asserts that a new script
+      # isn't created, and that the there are only the expected number of scripts.
+      page.all("script").each do |script|
+        script.text.should == ''
+      end
+      page.all("script").size.should == 3
+      page.all("script[src]").size.should == 3
     end
 
   end # describe '/login'

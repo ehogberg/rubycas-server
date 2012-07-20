@@ -64,7 +64,7 @@
 
 $ ->
   $fields = $ "#email_field, #password_field"
-  $submitButton = $ "#submit_button"
+  $submitButton = $ "#login-submit"
   $("#login_form").submit ->
     valid = not $fields.blank()
     alert "Please enter your email and password to log in." unless valid

@@ -55,7 +55,7 @@
   $(function() {
     var $fields, $submitButton, debounce, measureAndCut;
     $fields = $("#email_field, #password_field");
-    $submitButton = $("#submit_button");
+    $submitButton = $("#login-submit");
     $("#login_form").submit(function() {
       var valid;
       valid = !$fields.blank();
