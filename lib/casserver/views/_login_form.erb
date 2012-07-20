@@ -2,18 +2,21 @@
 <form method="post" action="<%= @form_action || "login" %>" id="login-form"
   onsubmit="submitbutton = document.getElementById('login-submit'); submitbutton.value='<%= t.notice.please_wait %>'; submitbutton.disabled=true; return true;">
 
-  <input type="text" id="email_field" name="username" class="text" placeholder="email"
-  size="32" tabindex="1" accesskey="u" />
-
+  <input type="email" id="email_field" name="username" class="text" placeholder="email"
+  size="32" tabindex="1" accesskey="u" autocapitalize="off" autocorrect="off" />
+  <br />
+  <br />
   <input type="password" id="password_field" name="password" class="text" placeholder="password"
   size="32" tabindex="2" accesskey="p" autocomplete="off" />
+  <br />
+  <br />
 
 
   <input type="hidden" id="lt" name="lt" value="<%= escape_html @lt %>" />
   <input type="hidden" id="service" name="service" value="<%= escape_html @service %>" />
 
   <button type="submit" class="button" accesskey="l" value="<%= t.button.login %>"
-    tabindex="4" id="login-submit" >Log In</button>
+    tabindex="4" id="submit_button" ><%= t.button.login %></button>
 
 
   <%= @infoline %>

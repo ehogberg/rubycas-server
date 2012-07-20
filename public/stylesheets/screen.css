@@ -242,22 +242,7 @@ label {
   margin-bottom: 3px;
 }
 
-/* line 24, ../../assets/stylesheets/_forms.sass */
-#ratings_label {
-  font-weight: bold;
-  text-align: center;
-}
-
-/* line 29, ../../assets/stylesheets/_forms.sass */
-textarea {
-  overflow: hidden;
-}
-/* line 31, ../../assets/stylesheets/_forms.sass */
-#comments textarea {
-  height: 155px;
-}
-
-/* line 46, ../../assets/stylesheets/_forms.sass */
+/* line 36, ../../assets/stylesheets/_forms.sass */
 input[type='text'] {
   background-color: white;
   background-image: url('/public/images/bottom-shadow.png');
@@ -285,7 +270,7 @@ input[type='text'] {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 38, ../../assets/stylesheets/_forms.sass */
+/* line 28, ../../assets/stylesheets/_forms.sass */
 input[type='text']:focus, input[type='text'].focus {
   outline: none;
   border-width: 2px;
@@ -294,7 +279,7 @@ input[type='text']:focus, input[type='text'].focus {
   border-top-color: #0b91ff;
 }
 
-/* line 49, ../../assets/stylesheets/_forms.sass */
+/* line 39, ../../assets/stylesheets/_forms.sass */
 input.text, textarea {
   background-color: white;
   background-image: url('/public/images/bottom-shadow.png');
@@ -322,7 +307,7 @@ input.text, textarea {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 38, ../../assets/stylesheets/_forms.sass */
+/* line 28, ../../assets/stylesheets/_forms.sass */
 input.text:focus, input.text.focus, textarea:focus, textarea.focus {
   outline: none;
   border-width: 2px;
@@ -331,17 +316,17 @@ input.text:focus, input.text.focus, textarea:focus, textarea.focus {
   border-top-color: #0b91ff;
 }
 
-/* line 54, ../../assets/stylesheets/_forms.sass */
+/* line 44, ../../assets/stylesheets/_forms.sass */
 input, textarea, select {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
-/* line 64, ../../assets/stylesheets/_forms.sass */
+/* line 54, ../../assets/stylesheets/_forms.sass */
 .field_with_errors {
   display: inline;
 }
 
-/* line 67, ../../assets/stylesheets/_forms.sass */
+/* line 57, ../../assets/stylesheets/_forms.sass */
 button.button {
   background-image: url("/images/button-mobile@2x.png");
   background-color: #e4171e;
@@ -370,45 +355,45 @@ button.button {
   width: 140px;
   text-shadow: #666666 0px -1px 0px;
 }
-/* line 90, ../../assets/stylesheets/_forms.sass */
+/* line 81, ../../assets/stylesheets/_forms.sass */
 button.button.enabled:active {
   background-color: #a7000f;
   background-position: 0 -50px;
   border-color: #850000;
   border-bottom-color: #5d0000;
 }
-/* line 95, ../../assets/stylesheets/_forms.sass */
+/* line 86, ../../assets/stylesheets/_forms.sass */
 button.button span {
   display: block;
   height: 33px;
   padding: 10px;
   white-space: nowrap;
 }
-/* line 100, ../../assets/stylesheets/_forms.sass */
+/* line 91, ../../assets/stylesheets/_forms.sass */
 button.button.disabled {
   color: #f6b2b2;
 }
 
-/* line 104, ../../assets/stylesheets/_forms.sass */
+/* line 95, ../../assets/stylesheets/_forms.sass */
 .touch button.button {
   background-size: 200px 100px;
   font-size: 20px;
   height: 44px;
   width: 190px;
 }
-/* line 110, ../../assets/stylesheets/_forms.sass */
+/* line 101, ../../assets/stylesheets/_forms.sass */
 .touch button.button span {
   height: 33px;
   padding: 10px 0 0 10px;
 }
 
-/* line 114, ../../assets/stylesheets/_forms.sass */
+/* line 105, ../../assets/stylesheets/_forms.sass */
 form {
   position: relative;
   margin: 0;
   padding: 0;
 }
-/* line 118, ../../assets/stylesheets/_forms.sass */
+/* line 109, ../../assets/stylesheets/_forms.sass */
 form .placeholder {
   display: none;
   color: #999999;
@@ -420,7 +405,7 @@ form .placeholder {
   width: 260px;
   text-align: left;
 }
-/* line 129, ../../assets/stylesheets/_forms.sass */
+/* line 120, ../../assets/stylesheets/_forms.sass */
 form .placeholder.visible {
   display: block;
 }
