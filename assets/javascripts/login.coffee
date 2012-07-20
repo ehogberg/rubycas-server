@@ -35,7 +35,7 @@
     makePlaceholderElement = ->
       id = @id
       $placeholder = placeholders[id] = $ document.createElement "div"
-
+      
       # Decorate placeholder element
       $placeholder
         .text($("##{id}").attr("placeholder"))
@@ -46,24 +46,41 @@
       # Insert placeholder element into DOM
       $("##{id}").attr("placeholder", "").before $placeholder
 
-    @on("keyup keydown", controlPlaceholderState)
+
+    @on("keyup keydown change", controlPlaceholderState)
     .on("focus blur", controlFieldFocus)
     .each(makePlaceholderElement)
+
+    # In order to react to browsers autocompleting or autofilling
+    # We have to poll for the change
+    .each((i)->
+      setInterval((=>
+        controlPlaceholderState { target: @ }
+      ), 100)
+    )
 
 
 )(jQuery)
 
 $ ->
   $fields = $ "#email_field, #password_field"
-  $submitButton = $("#submit_button")
-  $("#log_in_form").submit ->
+  $submitButton = $ "#submit_button"
+  $("#login_form").submit ->
     valid = not $fields.blank()
     alert "Please enter your email and password to log in." unless valid
+    $submitButton.addClass("disabled").prop("disabled", true)
     valid
 
-  $submitButton.toggleClass "disabled", $fields.blank()
+  $submitButton
+    .toggleClass("disabled", $fields.blank())
+    .prop("disabled", $fields.blank())
+
   $fields.on "keyup keydown", ->
-    $submitButton.toggleClass("disabled", $fields.blank() or !$fields.val().match(/.+\@.+\..+/))
+    disabled = $fields.blank() or !$fields.val().match(/.+\@.+\..+/)
+    $submitButton
+      .toggleClass("disabled", disabled)
+      .prop("disabled", disabled)
+
 
   if "ontouchstart" of window
     scrollTo 0, 0

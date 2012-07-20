@@ -1,7 +1,5 @@
 <%# coding: UTF-8 -%>
-<form method="post" action="<%= @form_action || "login" %>" id="login-form"
-  onsubmit="submitbutton = document.getElementById('login-submit'); submitbutton.value='<%= t.notice.please_wait %>'; submitbutton.disabled=true; return true;">
-
+<form method="post" action="<%= @form_action || "login" %>" id="login_form">
   <input type="email" id="email_field" name="username" class="text" placeholder="email"
   size="32" tabindex="1" accesskey="u" autocapitalize="off" autocorrect="off" />
   <br />
@@ -16,9 +14,8 @@
   <input type="hidden" id="service" name="service" value="<%= escape_html @service %>" />
 
   <button type="submit" class="button" accesskey="l" value="<%= t.button.login %>"
-    tabindex="4" id="submit_button" ><%= t.button.login %></button>
-
+    tabindex="4" id="submit_button"><%= t.button.login %></button>
+  
 
   <%= @infoline %>
-
 </form>

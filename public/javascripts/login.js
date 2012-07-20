@@ -41,7 +41,14 @@
         });
         return $("#" + id).attr("placeholder", "").before($placeholder);
       };
-      return this.on("keyup keydown", controlPlaceholderState).on("focus blur", controlFieldFocus).each(makePlaceholderElement);
+      return this.on("keyup keydown change", controlPlaceholderState).on("focus blur", controlFieldFocus).each(makePlaceholderElement).each(function(i) {
+        var _this = this;
+        return setInterval((function() {
+          return controlPlaceholderState({
+            target: _this
+          });
+        }), 100);
+      });
     };
   })(jQuery);
 
@@ -49,17 +56,20 @@
     var $fields, $submitButton, debounce, measureAndCut;
     $fields = $("#email_field, #password_field");
     $submitButton = $("#submit_button");
-    $("#log_in_form").submit(function() {
+    $("#login_form").submit(function() {
       var valid;
       valid = !$fields.blank();
       if (!valid) {
         alert("Please enter your email and password to log in.");
       }
+      $submitButton.addClass("disabled").prop("disabled", true);
       return valid;
     });
-    $submitButton.toggleClass("disabled", $fields.blank());
+    $submitButton.toggleClass("disabled", $fields.blank()).prop("disabled", $fields.blank());
     $fields.on("keyup keydown", function() {
-      return $submitButton.toggleClass("disabled", $fields.blank() || !$fields.val().match(/.+\@.+\..+/));
+      var disabled;
+      disabled = $fields.blank() || !$fields.val().match(/.+\@.+\..+/);
+      return $submitButton.toggleClass("disabled", disabled).prop("disabled", disabled);
     });
     if ("ontouchstart" in window) {
       scrollTo(0, 0);

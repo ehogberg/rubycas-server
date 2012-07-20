@@ -245,7 +245,7 @@ label {
 /* line 36, ../../assets/stylesheets/_forms.sass */
 input[type='text'] {
   background-color: white;
-  background-image: url('/public/images/bottom-shadow.png');
+  background-image: url('/images/bottom-shadow.png');
   background-repeat: repeat-x;
   background-position: 0 0;
   -webkit-background-size: 100% 3px;
@@ -282,7 +282,7 @@ input[type='text']:focus, input[type='text'].focus {
 /* line 39, ../../assets/stylesheets/_forms.sass */
 input.text, textarea {
   background-color: white;
-  background-image: url('/public/images/bottom-shadow.png');
+  background-image: url('/images/bottom-shadow.png');
   background-repeat: repeat-x;
   background-position: 0 0;
   -webkit-background-size: 100% 3px;
@@ -408,4 +408,9 @@ form .placeholder {
 /* line 120, ../../assets/stylesheets/_forms.sass */
 form .placeholder.visible {
   display: block;
+}
+
+/* line 123, ../../assets/stylesheets/_forms.sass */
+#please_wait {
+  padding-top: 0.5em;
 }
