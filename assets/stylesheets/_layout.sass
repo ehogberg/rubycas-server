@@ -1,0 +1,104 @@
+body
+  margin: 0
+body, #foot
+  min-width: 890px
+
+img
+  border: 0
+
+#head
+  height: 122px
+  position: relative
+  +transition-property(height)
+  +transition-duration(0.5s)
+  h1
+    height: 56px
+    width: 253px
+    +mp
+    left: $side_margin
+    position: absolute
+    top: 30px
+    +transition-property(top)
+    +transition-duration(0.5s)
+    a
+      display: block
+      img
+        height: 56px
+        width: 253px
+  h3
+    +mp
+    position: absolute
+    right: $side_margin
+    width: 250px
+    text-align: right
+    top: 38px
+    +transition-property(top)
+    +transition-duration(0.5s)
+
+#main
+  background: #f2f2f2 url(/images/light-grey-gradient.png) repeat-x
+  padding-bottom: 20px
+  +clearfix
+
+  h1, h2
+    +mp
+
+  h1
+    padding-top: 30px
+
+  h2
+    padding-bottom: 20px
+
+  #content
+    //display: inline
+    //float: left
+    margin-left: $side_margin
+    
+  #log_in
+    display: inline
+    width: 320px
+    margin-left: $side_margin/2
+    margin-right: $side_margin
+
+    h1
+      padding-bottom: 30px
+
+#foot
+  background-color: #e7e7e7
+  border-top: 1px dotted #333
+  bottom: 0
+  clear: both
+  font-size: 12px
+  height: 60px
+  position: absolute
+  left: 0
+  right: 0
+
+  .left
+    display: inline
+    margin-left: $side_margin
+
+  p
+    margin: 0
+    padding-top: 1em
+
+  .right
+    display: inline
+    margin-right: $side_margin
+    text-align: right
+
+  .mark
+    background: url(/images/opinionlab-mark.png) no-repeat right 1em
+    padding-right: 40px
+
+.short_viewport
+  #head
+    height: 80px
+    h1
+      top: 10px
+    h3
+      top: 18px
+
+  #foot
+    position: relative
+    top: 0px

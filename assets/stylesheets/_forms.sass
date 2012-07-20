@@ -1,0 +1,131 @@
+=fields
+  background: 
+    color: #fff
+    image: image-url('bottom-shadow.png')
+    repeat: repeat-x
+    position: 0 0
+  +background-size(100% 3px)
+  border-color: #999
+  border: 1px solid #999999 
+  border-bottom-color: #B3B3B3  
+  border-top-color: #808080
+  +tahoma
+  font-size: 18px
+  width: 100%
+  +box-sizing(border-box)
+  padding: 9px
+  margin: 0
+
+
+label
+  display: block
+  margin-bottom: 3px
+
+#ratings_label
+  font-weight: bold
+  text-align: center
+
+
+textarea
+  overflow: hidden
+  #comments &
+    height: 155px
+
+=inputs
+  +fields
+  +border-radius
+
+  &:focus, &.focus
+    outline: none
+    border-width: 2px
+    padding: 8px
+    border-color: #71bfff
+    border-top-color: #0b91ff
+
+//have to do this becuase ie6 freaks out if you use attribute selectors
+input[type='text']
+  +inputs
+
+input.text, textarea
+  +inputs
+//end
+
+//disable androids orange focus we have our own
+input, textarea, select
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+
+//select
+  //width: 100%
+  //margin-bottom: 3px
+
+  //#comments &
+    //margin-bottom: 5px
+
+.field_with_errors
+  display: inline
+
+button.button
+  background-image: url('/images/button-mobile@2x.png')
+  background-color: #e4171e
+  background-repeat: repeat-x
+  color: white
+  cursor: default
+  height: 32px
+  display: block
+  +tahoma
+  font-weight: bold
+  font-size: 16px
+  background-size: 200px 73px
+  border-radius: 8px
+  border: 1px solid #ed0006
+  border-bottom-color: #b50000
+  +box-shadow(rgba(0, 0, 0, 0.2) 2px 2px 2px 0px)
+  padding: 0 10px
+  text-align: center
+  text-transform: capitalize
+  text-decoration: none
+  +box-sizing(border-box)
+  width: 140px
+  text-shadow: #666666 0px -1px 0px
+  &.enabled:active
+    background-color: #a7000f
+    background-position: 0 -50px
+    border-color: #850000
+    border-bottom-color: #5d0000
+  span
+    display: block
+    height: 33px
+    padding: 10px
+    white-space: nowrap
+  &.disabled
+    color: #f6b2b2
+
+.touch
+  button.button
+    background-size: 200px 100px
+    font-size: 20px
+    height: 44px
+    width: 190px
+
+    span
+      height: 33px
+      padding: 10px 0 0 10px
+
+form
+  position: relative
+  +mp
+
+  .placeholder
+    display: none
+    color: #999999
+    font-size: 18px
+    left: 15px
+    padding-top: 11px
+    position: absolute
+    pointer-events: none
+    width: 260px
+    text-align: left
+
+    &.visible
+      display: block
+

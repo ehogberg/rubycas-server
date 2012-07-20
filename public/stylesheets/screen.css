@@ -1,0 +1,426 @@
+/* line 1, ../../assets/stylesheets/_mixins.sass */
+.red {
+  color: #f13f3c;
+}
+
+/* line 4, ../../assets/stylesheets/_mixins.sass */
+.left {
+  float: left;
+}
+
+/* line 7, ../../assets/stylesheets/_mixins.sass */
+.right {
+  float: right;
+}
+
+/* line 1, ../../assets/stylesheets/_layout.sass */
+body {
+  margin: 0;
+}
+
+/* line 3, ../../assets/stylesheets/_layout.sass */
+body, #foot {
+  min-width: 890px;
+}
+
+/* line 6, ../../assets/stylesheets/_layout.sass */
+img {
+  border: 0;
+}
+
+/* line 9, ../../assets/stylesheets/_layout.sass */
+#head {
+  height: 122px;
+  position: relative;
+  -webkit-transition-property: height;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+/* line 14, ../../assets/stylesheets/_layout.sass */
+#head h1 {
+  height: 56px;
+  width: 253px;
+  margin: 0;
+  padding: 0;
+  left: 40px;
+  position: absolute;
+  top: 30px;
+  -webkit-transition-property: top;
+  -moz-transition-property: top;
+  -o-transition-property: top;
+  transition-property: top;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+/* line 23, ../../assets/stylesheets/_layout.sass */
+#head h1 a {
+  display: block;
+}
+/* line 25, ../../assets/stylesheets/_layout.sass */
+#head h1 a img {
+  height: 56px;
+  width: 253px;
+}
+/* line 28, ../../assets/stylesheets/_layout.sass */
+#head h3 {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 40px;
+  width: 250px;
+  text-align: right;
+  top: 38px;
+  -webkit-transition-property: top;
+  -moz-transition-property: top;
+  -o-transition-property: top;
+  transition-property: top;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+/* line 38, ../../assets/stylesheets/_layout.sass */
+#main {
+  background: #f2f2f2 url(/images/light-grey-gradient.png) repeat-x;
+  padding-bottom: 20px;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 43, ../../assets/stylesheets/_layout.sass */
+#main h1, #main h2 {
+  margin: 0;
+  padding: 0;
+}
+/* line 46, ../../assets/stylesheets/_layout.sass */
+#main h1 {
+  padding-top: 30px;
+}
+/* line 49, ../../assets/stylesheets/_layout.sass */
+#main h2 {
+  padding-bottom: 20px;
+}
+/* line 52, ../../assets/stylesheets/_layout.sass */
+#main #content {
+  margin-left: 40px;
+}
+/* line 57, ../../assets/stylesheets/_layout.sass */
+#main #log_in {
+  display: inline;
+  width: 320px;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+/* line 63, ../../assets/stylesheets/_layout.sass */
+#main #log_in h1 {
+  padding-bottom: 30px;
+}
+
+/* line 66, ../../assets/stylesheets/_layout.sass */
+#foot {
+  background-color: #e7e7e7;
+  border-top: 1px dotted #333333;
+  bottom: 0;
+  clear: both;
+  font-size: 12px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+/* line 77, ../../assets/stylesheets/_layout.sass */
+#foot .left {
+  display: inline;
+  margin-left: 40px;
+}
+/* line 81, ../../assets/stylesheets/_layout.sass */
+#foot p {
+  margin: 0;
+  padding-top: 1em;
+}
+/* line 85, ../../assets/stylesheets/_layout.sass */
+#foot .right {
+  display: inline;
+  margin-right: 40px;
+  text-align: right;
+}
+/* line 90, ../../assets/stylesheets/_layout.sass */
+#foot .mark {
+  background: url(/images/opinionlab-mark.png) no-repeat right 1em;
+  padding-right: 40px;
+}
+
+/* line 95, ../../assets/stylesheets/_layout.sass */
+.short_viewport #head {
+  height: 80px;
+}
+/* line 97, ../../assets/stylesheets/_layout.sass */
+.short_viewport #head h1 {
+  top: 10px;
+}
+/* line 99, ../../assets/stylesheets/_layout.sass */
+.short_viewport #head h3 {
+  top: 18px;
+}
+/* line 102, ../../assets/stylesheets/_layout.sass */
+.short_viewport #foot {
+  position: relative;
+  top: 0px;
+}
+
+/* line 1, ../../assets/stylesheets/_type.sass */
+body {
+  color: #444444;
+  font-size: 14px;
+  font-family: Tahoma, Helvetica, Arial, sans-serif;
+}
+
+/* line 6, ../../assets/stylesheets/_type.sass */
+h1, h2, h3 {
+  color: black;
+  font-family: "Quattrocento Sans", Tahoma, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+/* line 12, ../../assets/stylesheets/_type.sass */
+h1 {
+  font-size: 40px;
+}
+
+/* line 15, ../../assets/stylesheets/_type.sass */
+h2 {
+  font-size: 30px;
+}
+
+/* line 18, ../../assets/stylesheets/_type.sass */
+h3 {
+  font-size: 22px;
+}
+
+/* line 21, ../../assets/stylesheets/_type.sass */
+a {
+  color: #f13f3c;
+}
+/* line 18, ../../../../.rvm/gems/ruby-1.9.3-p0@rubycas-server/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:visited {
+  color: purple;
+}
+/* line 21, ../../../../.rvm/gems/ruby-1.9.3-p0@rubycas-server/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:focus {
+  color: #cc0000;
+}
+/* line 24, ../../../../.rvm/gems/ruby-1.9.3-p0@rubycas-server/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:hover {
+  color: black;
+}
+/* line 27, ../../../../.rvm/gems/ruby-1.9.3-p0@rubycas-server/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:active {
+  color: #cc0000;
+}
+
+/* line 25, ../../assets/stylesheets/_type.sass */
+#content li {
+  list-style: none;
+  margin-bottom: 1em;
+}
+/* line 28, ../../assets/stylesheets/_type.sass */
+#content .screenshot {
+  margin-right: 1em;
+}
+
+/* line 20, ../../assets/stylesheets/_forms.sass */
+label {
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* line 24, ../../assets/stylesheets/_forms.sass */
+#ratings_label {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 29, ../../assets/stylesheets/_forms.sass */
+textarea {
+  overflow: hidden;
+}
+/* line 31, ../../assets/stylesheets/_forms.sass */
+#comments textarea {
+  height: 155px;
+}
+
+/* line 46, ../../assets/stylesheets/_forms.sass */
+input[type='text'] {
+  background-color: white;
+  background-image: url('/public/images/bottom-shadow.png');
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  -webkit-background-size: 100% 3px;
+  -moz-background-size: 100% 3px;
+  -o-background-size: 100% 3px;
+  background-size: 100% 3px;
+  border-color: #999999;
+  border: 1px solid #999999;
+  border-bottom-color: #b3b3b3;
+  border-top-color: gray;
+  font-family: Tahoma, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 9px;
+  margin: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 38, ../../assets/stylesheets/_forms.sass */
+input[type='text']:focus, input[type='text'].focus {
+  outline: none;
+  border-width: 2px;
+  padding: 8px;
+  border-color: #71bfff;
+  border-top-color: #0b91ff;
+}
+
+/* line 49, ../../assets/stylesheets/_forms.sass */
+input.text, textarea {
+  background-color: white;
+  background-image: url('/public/images/bottom-shadow.png');
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  -webkit-background-size: 100% 3px;
+  -moz-background-size: 100% 3px;
+  -o-background-size: 100% 3px;
+  background-size: 100% 3px;
+  border-color: #999999;
+  border: 1px solid #999999;
+  border-bottom-color: #b3b3b3;
+  border-top-color: gray;
+  font-family: Tahoma, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 9px;
+  margin: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 38, ../../assets/stylesheets/_forms.sass */
+input.text:focus, input.text.focus, textarea:focus, textarea.focus {
+  outline: none;
+  border-width: 2px;
+  padding: 8px;
+  border-color: #71bfff;
+  border-top-color: #0b91ff;
+}
+
+/* line 54, ../../assets/stylesheets/_forms.sass */
+input, textarea, select {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+/* line 64, ../../assets/stylesheets/_forms.sass */
+.field_with_errors {
+  display: inline;
+}
+
+/* line 67, ../../assets/stylesheets/_forms.sass */
+button.button {
+  background-image: url("/images/button-mobile@2x.png");
+  background-color: #e4171e;
+  background-repeat: repeat-x;
+  color: white;
+  cursor: default;
+  height: 32px;
+  display: block;
+  font-family: Tahoma, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  background-size: 200px 73px;
+  border-radius: 8px;
+  border: 1px solid #ed0006;
+  border-bottom-color: #b50000;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px 0px;
+  padding: 0 10px;
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 140px;
+  text-shadow: #666666 0px -1px 0px;
+}
+/* line 90, ../../assets/stylesheets/_forms.sass */
+button.button.enabled:active {
+  background-color: #a7000f;
+  background-position: 0 -50px;
+  border-color: #850000;
+  border-bottom-color: #5d0000;
+}
+/* line 95, ../../assets/stylesheets/_forms.sass */
+button.button span {
+  display: block;
+  height: 33px;
+  padding: 10px;
+  white-space: nowrap;
+}
+/* line 100, ../../assets/stylesheets/_forms.sass */
+button.button.disabled {
+  color: #f6b2b2;
+}
+
+/* line 104, ../../assets/stylesheets/_forms.sass */
+.touch button.button {
+  background-size: 200px 100px;
+  font-size: 20px;
+  height: 44px;
+  width: 190px;
+}
+/* line 110, ../../assets/stylesheets/_forms.sass */
+.touch button.button span {
+  height: 33px;
+  padding: 10px 0 0 10px;
+}
+
+/* line 114, ../../assets/stylesheets/_forms.sass */
+form {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+/* line 118, ../../assets/stylesheets/_forms.sass */
+form .placeholder {
+  display: none;
+  color: #999999;
+  font-size: 18px;
+  left: 15px;
+  padding-top: 11px;
+  position: absolute;
+  pointer-events: none;
+  width: 260px;
+  text-align: left;
+}
+/* line 129, ../../assets/stylesheets/_forms.sass */
+form .placeholder.visible {
+  display: block;
+}
