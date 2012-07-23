@@ -34,6 +34,10 @@ For more information on RubyCAS-Server, see http://code.google.com/p/rubycas-ser
   s.add_dependency("sinatra", "~> 1.0")
   s.add_dependency("sinatra-r18n")
   s.add_dependency("crypt-isaac", "~> 0.9.1")
+  s.add_dependency("pg")
+  s.add_dependency("unicorn")
+  s.add_dependency("bcrypt-ruby")
+  s.add_dependency("hirefireapp")
 
   s.add_development_dependency("rack-test")
   s.add_development_dependency("capybara", '1.1.2')
@@ -41,6 +45,15 @@ For more information on RubyCAS-Server, see http://code.google.com/p/rubycas-ser
   s.add_development_dependency("rspec-core")
   s.add_development_dependency("rake", "0.8.7")
   s.add_development_dependency("sqlite3", "~> 1.3.1")
+  s.add_development_dependency("foreman")
+  s.add_development_dependency("heroku")
+#  s.add_development_dependency("guard")
+#  s.add_development_dependency("guard-coffeescript")
+#  s.add_development_dependency("guard-compass")
+
+
+
+
 
   # for authenticator specs
   s.add_development_dependency("net-ldap", "~> 0.1.1")
