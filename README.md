@@ -10,8 +10,13 @@
 
 4.  Run foreman start from the project root directory.
 
-5.  Browser to http://localhost:5100 to (hopefully) see the OLab login screen.
+5.  Browser to http://localhost:5000 to (hopefully) see the OLab login screen.
 
+## Editing JavaScript and CSS
+
+JavaScript is written with CoffeeScript. The CSS is written with Sass and
+Compass. Guard is used to automatically build these assets (run `bundle exec guard`). It'll
+watch for changes, then create the rendered js and css in public.
 
 ## Copyright
 
