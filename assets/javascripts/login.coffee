@@ -68,18 +68,14 @@ $ ->
   $("#login_form").submit ->
     valid = not $fields.blank()
     alert "Please enter your email and password to log in." unless valid
-    $submitButton.addClass("disabled").prop("disabled", true)
+    $submitButton.addClass("disabled")
     valid
 
-  $submitButton
-    .toggleClass("disabled", $fields.blank())
-    .prop("disabled", $fields.blank())
+  $submitButton.toggleClass("disabled", $fields.blank())
 
   $fields.on "keyup keydown", ->
     disabled = $fields.blank() or !$fields.val().match(/.+\@.+\..+/)
-    $submitButton
-      .toggleClass("disabled", disabled)
-      .prop("disabled", disabled)
+    $submitButton.toggleClass("disabled", disabled)
 
 
   if "ontouchstart" of window

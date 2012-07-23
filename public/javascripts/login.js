@@ -62,14 +62,14 @@
       if (!valid) {
         alert("Please enter your email and password to log in.");
       }
-      $submitButton.addClass("disabled").prop("disabled", true);
+      $submitButton.addClass("disabled");
       return valid;
     });
-    $submitButton.toggleClass("disabled", $fields.blank()).prop("disabled", $fields.blank());
+    $submitButton.toggleClass("disabled", $fields.blank());
     $fields.on("keyup keydown", function() {
       var disabled;
       disabled = $fields.blank() || !$fields.val().match(/.+\@.+\..+/);
-      return $submitButton.toggleClass("disabled", disabled).prop("disabled", disabled);
+      return $submitButton.toggleClass("disabled", disabled);
     });
     if ("ontouchstart" in window) {
       scrollTo(0, 0);
