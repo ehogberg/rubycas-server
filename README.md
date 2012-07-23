@@ -18,6 +18,10 @@ JavaScript is written with CoffeeScript. The CSS is written with Sass and
 Compass. Guard is used to automatically build these assets (run `bundle exec guard`). It'll
 watch for changes, then create the rendered js and css in public.
 
+Unlike Rails on the Heroku Cedar stack, we do not have the option of compiling
+assets during slug compilation. Meaning, if you make changes to the Sass or
+Coffee files, you must build the assets locally with Guard.
+
 ## Copyright
 
 Portions contributed by Matt Zukowski are copyright (c) 2011 Urbacon Ltd.
