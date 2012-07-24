@@ -8,9 +8,6 @@ gem 'hirefireapp', :group => :production
 
 group :development do
   gem 'heroku'
-end
-
-group :assets do
   gem 'guard'
   gem 'guard-coffeescript'
   gem 'guard-compass'
