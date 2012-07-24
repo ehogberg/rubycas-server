@@ -114,16 +114,17 @@ img {
 /* line 57, ../../assets/stylesheets/_layout.sass */
 #main #log_in {
   display: inline;
-  width: 320px;
+  padding-bottom: 20px;
   margin-left: 20px;
   margin-right: 40px;
+  width: 320px;
 }
-/* line 63, ../../assets/stylesheets/_layout.sass */
+/* line 64, ../../assets/stylesheets/_layout.sass */
 #main #log_in h1 {
   padding-bottom: 30px;
 }
 
-/* line 66, ../../assets/stylesheets/_layout.sass */
+/* line 67, ../../assets/stylesheets/_layout.sass */
 #foot {
   background-color: #e7e7e7;
   border-top: 1px dotted #333333;
@@ -135,41 +136,41 @@ img {
   left: 0;
   right: 0;
 }
-/* line 77, ../../assets/stylesheets/_layout.sass */
+/* line 78, ../../assets/stylesheets/_layout.sass */
 #foot .left {
   display: inline;
   margin-left: 40px;
 }
-/* line 81, ../../assets/stylesheets/_layout.sass */
+/* line 82, ../../assets/stylesheets/_layout.sass */
 #foot p {
   margin: 0;
   padding-top: 1em;
 }
-/* line 85, ../../assets/stylesheets/_layout.sass */
+/* line 86, ../../assets/stylesheets/_layout.sass */
 #foot .right {
   display: inline;
   margin-right: 40px;
   text-align: right;
 }
-/* line 90, ../../assets/stylesheets/_layout.sass */
+/* line 91, ../../assets/stylesheets/_layout.sass */
 #foot .mark {
   background: url(/images/opinionlab-mark.png) no-repeat right 1em;
   padding-right: 40px;
 }
 
-/* line 95, ../../assets/stylesheets/_layout.sass */
+/* line 96, ../../assets/stylesheets/_layout.sass */
 .short_viewport #head {
   height: 80px;
 }
-/* line 97, ../../assets/stylesheets/_layout.sass */
+/* line 98, ../../assets/stylesheets/_layout.sass */
 .short_viewport #head h1 {
   top: 10px;
 }
-/* line 99, ../../assets/stylesheets/_layout.sass */
+/* line 100, ../../assets/stylesheets/_layout.sass */
 .short_viewport #head h3 {
   top: 18px;
 }
-/* line 102, ../../assets/stylesheets/_layout.sass */
+/* line 103, ../../assets/stylesheets/_layout.sass */
 .short_viewport #foot {
   position: relative;
   top: 0px;
@@ -413,4 +414,17 @@ form .placeholder.visible {
 /* line 123, ../../assets/stylesheets/_forms.sass */
 #please_wait {
   padding-top: 0.5em;
+}
+
+/* line 126, ../../assets/stylesheets/_forms.sass */
+.messagebox {
+  padding: 0 0 10px 0;
+}
+/* line 129, ../../assets/stylesheets/_forms.sass */
+.messagebox.error, .messagebox.mistake {
+  color: #f13f3c;
+}
+/* line 132, ../../assets/stylesheets/_forms.sass */
+.messagebox.notice {
+  color: #1ece4a;
 }
