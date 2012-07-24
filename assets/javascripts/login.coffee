@@ -1,8 +1,30 @@
-(($)->
+# Add a 'blank' helper that checks if any fields are empty
+blank = (element)->
+  jQuery.trim($(element).val()) is ""
 
-  # Add a 'blank' helper that checks if any fields are empty
-  blank = (element)->
-    jQuery.trim($(element).val()) is ""
+# setInterval helper
+every = (ms, f)-> setInterval f, ms
+
+# Ripped from Underscore
+# Prevents a function from being called more frequently than a given interval
+debounce = (func, wait, immediate) ->
+  ->
+    context = this
+    args    = arguments
+    later   = ->
+      timeout = null
+      unless immediate
+        func.apply context, args
+
+    if immediate and not timeout
+      func.apply context, args
+
+    clearTimeout timeout
+    timeout = setTimeout later, wait
+
+
+# Add a simple placeholder jQuery plugin
+(($)->
 
   # Make a jQuery plugin that tests for any blank fields
   $.fn.blank = ->
@@ -54,62 +76,53 @@
     # In order to react to browsers autocompleting or autofilling
     # We have to poll for the change
     .each((i)->
-      setInterval((=>
+      every 100, =>
         controlPlaceholderState { target: @ }
-      ), 100)
     )
 
 
 )(jQuery)
 
+# On DOM Ready
 $ ->
-  $fields = $ "#email_field, #password_field"
+  # Get references to DOM elements
+  $email        = $ "#email_field"
+  $password     = $ "#password_field"
+  $fields       = $ "#email_field, #password_field"
   $submitButton = $ "#login-submit"
+
+  # A callback that controls the appearance of the submit button
+  controlButtonState = ->
+    disabled = $fields.blank() or !$email.val().match(/.+\@.+\..+/)
+    $submitButton.toggleClass("disabled", disabled)
+
+  # Manage the footer
+  measureAndCut = ->
+    $('html').toggleClass 'short_viewport', ($(window).height() < 530)
+
+  # Validate form on submit
   $("#login_form").submit ->
     valid = not $fields.blank()
     alert "Please enter your email and password to log in." unless valid
     $submitButton.addClass("disabled")
     valid
 
-  $submitButton.toggleClass("disabled", $fields.blank())
-
-  $fields.on "keyup keydown", ->
-    disabled = $fields.blank() or !$fields.val().match(/.+\@.+\..+/)
-    $submitButton.toggleClass("disabled", disabled)
-
-
-  if "ontouchstart" of window
-    scrollTo 0, 0
-  else
-    $('#email_field').focus()
-
+  # Attach button callback
+  $fields.on "keyup keydown", controlButtonState
+  controlButtonState()
+  every 100, controlButtonState
 
   # Use the placeholder plugin
   $fields.placeholder()
-  
 
-  # Ripped from Underscore
-  debounce = (func, wait, immediate) ->
-    ->
-      context = this
-      args    = arguments
-      later   = ->
-        timeout = null
-        unless immediate
-          func.apply context, args
-
-      if immediate and not timeout
-        func.apply context, args
-
-      clearTimeout timeout
-      timeout = setTimeout later, wait
-
-  # Manage the footer
-  measureAndCut = ->
-    $('html').toggleClass 'short_viewport', ($(window).height() < 530)
-
+  # When the window resizes, set a class name on the html element
   measureAndCut()
-
   $(window).on 'resize', debounce measureAndCut, 500
+
+  # Hide mobile browser's chrome or focus on first email field
+  if "ontouchstart" of window
+    scrollTo 0, 0
+  else
+    $email.focus()
 
 
