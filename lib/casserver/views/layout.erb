@@ -4,10 +4,6 @@
 <html lang="en">
   <head>
     <title>Log in to Opinionlab: <%= @serviceContent.title %></title>
-    <!--
-    <link rel="stylesheet" type="text/css" href="<%= escape_html @uri_path %>/themes/cas.css" />
-    <link rel="stylesheet" type="text/css" href="<%= escape_html @uri_path %>/themes/<%= escape_html @theme %>/theme.css" />
-    -->
     <link href='https://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" type="text/css" href="<%= escape_html @uri_path %>/stylesheets/screen.css" />
     <link rel="icon" type="image/png" href="<%= escape_html @uri_path %>/favicon.ico" />
@@ -34,25 +30,6 @@
         <h2 class="red"><%= @serviceContent.slogan %></h2>
         <img class="screenshot left" src="<%= escape_html @uri_path %>/images/<%= @serviceContent.image %>" />
         <%= erb "services/_#{ @serviceContent.title.downcase }".to_sym %>
-        <!--
-        <ul>
-          <li>
-          <strong>Feedback Over Time</strong>
-          <br>
-          Analyze performance over time using vibrant charts.
-          </li>
-          <li>
-          <strong>Map It</strong>
-          <br>
-          See where the feedback was given. Identify negative hot spots.
-          </li>
-          <li>
-          <strong>Schedule Reports</strong>
-          <br>
-          Schedule email reports to be sent to people within your organization.
-          </li>
-        </ul>
-        -->
       </div>
       <div style="clear:both">&nbsp;</div>
     </div>
