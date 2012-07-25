@@ -33,7 +33,7 @@
         <h1><%= @serviceContent.title %></h1>
         <h2 class="red"><%= @serviceContent.slogan %></h2>
         <img class="screenshot left" src="<%= escape_html @uri_path %>/images/<%= @serviceContent.image %>" />
-        <%= erb "services/_#{ @serviceContent.title }".to_sym %>
+        <%= erb "services/_#{ @serviceContent.title.downcase }".to_sym %>
         <!--
         <ul>
           <li>
