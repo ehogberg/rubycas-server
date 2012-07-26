@@ -161,7 +161,7 @@
 #   i.e. `mysqladmin -u root create casserver`)
 
 database:
-  adapter: <%= ENV['DB_ADAPTER'] %> 
+  adapter: <%= ENV['DB_ADAPTER'] %>
   username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASSWORD'] %>
   host: <%= ENV['DB_HOST'] %>
@@ -276,6 +276,7 @@ authenticator:
     restricted_domain: opinionlab.com
   - class: OLabDatabaseAuthenticator
     source: ./lib/olab.rb
+    extra_attributes: firstname, lastname, id, updated_at
     database:
         adapter: postgresql
         database: <%= ENV['UUM_DB'] %>

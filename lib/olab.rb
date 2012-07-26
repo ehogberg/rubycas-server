@@ -54,10 +54,21 @@ class OLabDatabaseAuthenticator < CASServer::Authenticators::Base
       db_password = BCrypt::Password.new u.password_digest
 
       # Compare retrieved p/w with supplied p/w.  If matching, return user profile object.
-      # If not matching, return false to indicate a failed check.
-      db_password == @password ? u : false
+
+      if db_password == @password
+
+        # Fill in extra attributes.
+        extra_attributes_to_extract.each do |attr|
+          @extra_attributes[attr] = u.send(attr)
+        end
+
+        return u
+      end
+
     end
 
+    # ensure a false return to CAS if gotten this far
+    false
   end
 
 end
