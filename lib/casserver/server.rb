@@ -4,6 +4,7 @@ require 'casserver/utils'
 require 'casserver/cas'
 
 require 'logger'
+require 'olab-service-content'
 $LOG ||= Logger.new(STDOUT)
 
 module CASServer

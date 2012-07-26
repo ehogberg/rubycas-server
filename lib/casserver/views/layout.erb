@@ -1,12 +1,9 @@
 <%# coding: UTF-8 -%>
 <!DOCTYPE html>
+<% @serviceContent = ServiceContent[params[:service]] %>
 <html lang="en">
   <head>
-    <title>Log in to Opinionlab</title>
-    <!--
-    <link rel="stylesheet" type="text/css" href="<%= escape_html @uri_path %>/themes/cas.css" />
-    <link rel="stylesheet" type="text/css" href="<%= escape_html @uri_path %>/themes/<%= escape_html @theme %>/theme.css" />
-    -->
+    <title>Log in to Opinionlab: <%= @serviceContent.title %>: <%= @serviceContent.slogan %></title>
     <link href='https://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" type="text/css" href="<%= escape_html @uri_path %>/stylesheets/screen.css" />
     <link rel="icon" type="image/png" href="<%= escape_html @uri_path %>/favicon.ico" />
@@ -29,26 +26,10 @@
         <%= yield %>
       </div>
       <div id="content">
-        <h1>Analytics</h1>
-        <h2 class="red">visualize your feedback</h2>
-        <img class="screenshot left" src="<%= escape_html @uri_path %>/images/screenshot.png">
-        <ul>
-          <li>
-          <strong>Feedback Over Time</strong>
-          <br>
-          Analyze performance over time using vibrant charts.
-          </li>
-          <li>
-          <strong>Map It</strong>
-          <br>
-          See where the feedback was given. Identify negative hot spots.
-          </li>
-          <li>
-          <strong>Schedule Reports</strong>
-          <br>
-          Schedule email reports to be sent to people within your organization.
-          </li>
-        </ul>
+        <h1><%= @serviceContent.title %></h1>
+        <h2 class="red"><%= @serviceContent.slogan %></h2>
+        <img class="screenshot left" src="<%= escape_html @uri_path %>/images/<%= @serviceContent.image %>" />
+        <%= erb :"services/_#{ @serviceContent.partial }" %>
       </div>
       <div style="clear:both">&nbsp;</div>
     </div>
