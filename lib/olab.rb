@@ -45,7 +45,7 @@ class OLabDatabaseAuthenticator < CASServer::Authenticators::Base
 
     # Email is used as the unique profile identifier in this system ... locate the appropriate profile using
     # the supplied email address.
-    u = User.find_by_email @username
+    u = User.where(email: @username, type: nil).first
 
     # If no match by email, then there obviously can't be a successful check.  Fall-thru to allow a
     # nil return, which will signal failure to the CAS server.

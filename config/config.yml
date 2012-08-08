@@ -283,6 +283,7 @@ authenticator:
         host: <%= ENV['UUM_HOST'] %>
         username: <%= ENV['UUM_USER'] %>
         password: <%= ENV['UUM_PASSWORD'] %>
+        port: <%= ENV['UUM_PORT'] %>
 #
 # If you are behind an http proxy, you can try specifying proxy settings as follows:
 #

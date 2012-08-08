@@ -15,6 +15,7 @@ custom/*
 .DS_Store
 /nbproject
 .irbrc_history
+.sass_cache/
 resources/dev
 .rvmrc
 .bundle
