@@ -72,7 +72,6 @@ GEM
       rubyzip
     heroku-api (0.2.13)
       excon (~> 0.15.4)
-    hirefireapp (0.0.8)
     i18n (0.5.0)
     kgio (2.7.4)
     launchy (2.1.0)
@@ -150,7 +149,6 @@ DEPENDENCIES
   guard-coffeescript
   guard-compass
   heroku
-  hirefireapp
   net-ldap (~> 0.1.1)
   pg
   rack-test

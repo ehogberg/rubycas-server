@@ -6,7 +6,6 @@ gem "pg"
 gem "foreman"
 gem "unicorn"
 gem "bcrypt-ruby", :require => "bcrypt"
-gem 'hirefireapp', :group => :production
 
 group :development do
   gem 'heroku'
