@@ -13,6 +13,7 @@ end
 # Code should be fairly self-explanatory.
 require 'casserver/authenticators/base'
 require 'bcrypt'
+require 'logger'
 
 
 require 'casserver/authenticators/google'
@@ -32,15 +33,18 @@ end
 class OLabDatabaseAuthenticator < CASServer::Authenticators::Base
 
 
+
   def self.setup(options)
     super(options)
 
     # Establish connection to UUM profile db using AR semantics.
     User.establish_connection options["database"]
+    puts "Connecting to #{options['database']}"
   end
 
 
   def validate(credentials)
+
     read_standard_credentials(credentials)
 
     # Email is used as the unique profile identifier in this system ... locate the appropriate profile using
@@ -64,7 +68,8 @@ class OLabDatabaseAuthenticator < CASServer::Authenticators::Base
 
         return u
       end
-
+    else
+      puts "Could not find profile matching #{@username}."
     end
 
     # ensure a false return to CAS if gotten this far
