@@ -1,4 +1,5 @@
 set :repository, "git@github.com:ehogberg/rubycas-server.git"
+set :bundle_flags, "--no-deployment"
 set :branch, "feature-capify"
 
 
